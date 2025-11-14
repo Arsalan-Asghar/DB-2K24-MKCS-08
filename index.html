@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #090014, #0c0524, #110935);
+      background-size: 400% 400%;
+      animation: bgShift 12s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+    @keyframes bgShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .container {
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(138, 43, 226, 0.3);
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(138, 43, 226, 0.2);
+      padding: 40px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #a580ff;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px #823bff;
+    }
+    input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    input:focus {
+      box-shadow: 0 0 10px #823bff;
+      background: rgba(255,255,255,0.12);
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: linear-gradient(90deg, #6a00ff, #00bfff);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    button:hover {
+      box-shadow: 0 0 20px #823bff, 0 0 10px #00bfff;
+      transform: scale(1.05);
+    }
+    a {
+      color: #8a2be2;
+      text-decoration: none;
+      display: block;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: #00bfff;
+      text-shadow: 0 0 8px #00bfff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>User Registration</h2>
+    <form action="submit.php" method="POST">
+      <input type="text" name="name" placeholder="Enter your name" required>
+      <input type="number" name="age" placeholder="Enter your age" required>
+      <input type="password" name="password" placeholder="Enter your password" required>
+      <button type="submit">Submit</button>
+    </form>
+    <a href="view.php">View Registered Users</a>
+  </div>
+</body>
+</html>
