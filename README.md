@@ -1,6 +1,6 @@
 ---
 
-# **DB-2K24-MKCS-08 — Form Project**
+# **DB-2K24-MKCS-08 (Arsalan Asghar) — Form Project**
 
 This project contains an **HTML form**, **PHP backend**, and a **MySQL database**.
 It is designed to run locally on your system using **XAMPP**.
