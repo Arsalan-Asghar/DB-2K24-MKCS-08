@@ -1,94 +1,106 @@
-DB-2K24-MKCS-08 — Form Project
+---
 
-This project contains an HTML form, PHP backend, and a MySQL database.
-Your system (XAMPP) will run everything locally.
+# **DB-2K24-MKCS-08 — Form Project**
 
-🔧 How to Run the Project (XAMPP Instructions)
-1. Copy the project
+This project contains an **HTML form**, **PHP backend**, and a **MySQL database**.
+It is designed to run locally on your system using **XAMPP**.
 
-Copy the whole project folder into:
+---
 
-C:\xampp\htdocs\
+## **🔧 Setup Instructions (XAMPP)**
 
+### **1. Copy the Project**
 
-So the path becomes:
+Copy the entire folder into your XAMPP `htdocs` directory:
 
+```
 C:\xampp\htdocs\DB-2K24-MKCS-08\
+```
 
-2. Start XAMPP Services
+---
 
-Open XAMPP Control Panel and start:
+### **2. Start XAMPP Services**
 
-Apache
+Open **XAMPP Control Panel** and start:
 
-MySQL
+* **Apache**
+* **MySQL**
 
-Both must turn green.
+Both services should turn **green**.
 
-3. Create the Database
+---
 
-Open your browser
-Go to:
+### **3. Create the Database**
 
+1. Open your browser and go to:
+
+```
 http://localhost/phpmyadmin
+```
 
+2. Click **Databases** → create a new database:
 
-Click Databases → create a new database named:
-
+```
 form_db
+```
 
+3. Go to **Import** and select the SQL export file:
 
-Go to Import
-
-Import the file:
-
+```
 form_db.sql
+```
 
+Database setup is now complete ✅
 
-Database setup is done.
+---
 
-4. Update PHP Files for XAMPP
+### **4. Configure PHP Files**
 
-Open both:
+Open the PHP files:
 
-submit.php
+* `submit.php`
+* `view.php`
 
-view.php
+Update the database credentials to match XAMPP defaults:
 
-Set these values:
-
+```php
 $servername = "localhost";
-$username = "root";   // default for XAMPP
-$password = "";       // empty password in XAMPP
-$database = "form_db";
+$username = "root";    // default for XAMPP
+$password = "";        // empty password in XAMPP
+$dbname = "form_db";
+```
 
-5. Run the Project
+---
 
-Visit:
+### **5. Run the Project**
 
+Open your browser and visit:
+
+```
 http://localhost/DB-2K24-MKCS-08/index.html
+```
 
+* Fill out the form → data is saved to the database.
+* To view data, visit:
 
-Fill the form → it will save data into MySQL.
-
-Visit:
-
+```
 http://localhost/DB-2K24-MKCS-08/view.php
+```
 
+---
 
-to see submitted data.
+### **✔ Notes**
 
-✔ Notes
+* No external hosting is needed.
+* Works fully offline in XAMPP.
+* Tested with **Apache**, **PHP**, and **MySQL**.
+* SQL export is included.
 
-No external hosting needed.
+---
 
-Works fully offline once placed in htdocs.
+### **👨‍🎓 Submitted By**
 
-Tested with Apache, PHP, and MySQL.
-
-SQL export included.
-
-👨‍🎓 Submitted By
-
-Arsalan Asghar (08)
+**Arsalan Asghar (08)**
 DB-2K24-MKCS-08
+
+---
